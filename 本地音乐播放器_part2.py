@@ -1,15 +1,3 @@
-# ================== 下半部分（行 1601 起） ==================
-# 本文件为《本地音乐播放器.py》的后半部分。
-# 合并方式：type 本地音乐播放器_part1.py 本地音乐播放器_part2.py > 本地音乐播放器.py
-
-def _build_content(self, body):
-        content = tk.Frame(body, bg=self.MAIN_BG)
-        content.pack(side="left", fill="both", expand=True)
-
-        # ---- 列表视图 ----
-        self.list_view = tk.Frame(content, bg=self.MAIN_BG)
-
-        header = tk.Frame(self.list_view, bg=self.MAIN_BG)
         header.pack(fill="x", padx=26, pady=(22, 6))
         title_col = tk.Frame(header, bg=self.MAIN_BG)
         title_col.pack(side="left")
