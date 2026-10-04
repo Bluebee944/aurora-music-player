@@ -25,9 +25,9 @@
 
 ## 🚀 快速开始
 
-### 方式一：直接运行 EXE（推荐）
+### 方式一：直接运行 EXE
 
-从 [Releases](../../releases) 下载 `本地音乐播放器.exe`，双击即可使用。
+预编译的 EXE 未随仓库发布（体积约 66MB），请按「方式三」自行打包，或将 `D:\One\本地音乐播放器.exe` 复制到任意目录双击使用。
 
 ### 方式二：源码运行
 
@@ -49,6 +49,7 @@ python 本地音乐播放器.py
 ```bash
 pip install pyinstaller
 python build.py   # 先合并源码
+# 如需应用图标，将 icon.ico 放在与源码同目录后执行：
 python -m PyInstaller --onefile --noconsole --icon icon.ico --name "本地音乐播放器" 本地音乐播放器.py
 ```
 
