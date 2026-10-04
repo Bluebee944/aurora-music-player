@@ -1,0 +1,4 @@
+pygame-ce>=2.5.0
+PyAV>=13.0.0
+Pillow>=10.0.0
+pyinstaller>=6.0
