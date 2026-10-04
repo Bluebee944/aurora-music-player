@@ -31,13 +31,16 @@
 
 ### 方式二：源码运行
 
-需要 Python 3.10+：
+源码体积较大，为便于上传按行分片存放，运行前先合并：
 
 ```bash
-# 安装依赖
+# 1. 合并分片源码，生成 本地音乐播放器.py
+python build.py
+
+# 2. 安装依赖
 pip install -r requirements.txt
 
-# 运行
+# 3. 运行
 python 本地音乐播放器.py
 ```
 
@@ -45,6 +48,7 @@ python 本地音乐播放器.py
 
 ```bash
 pip install pyinstaller
+python build.py   # 先合并源码
 python -m PyInstaller --onefile --noconsole --icon icon.ico --name "本地音乐播放器" 本地音乐播放器.py
 ```
 
@@ -77,12 +81,14 @@ python -m PyInstaller --onefile --noconsole --icon icon.ico --name "本地音乐
 ## 📁 目录结构
 
 ```
-本地音乐播放器/
-├── 本地音乐播放器.py   # 主程序（单文件）
-├── requirements.txt    # 依赖清单
-├── icon.ico            # 应用图标
-├── covers_cache/       # 联网封面缓存（自动生成）
-└── favorites.json      # 收藏记录（自动生成）
+aurora-music-player/
+├── 本地音乐播放器_part1.py  # 源码前 1-1600 行
+├── 本地音乐播放器_part2.py  # 源码 1601-3083 行
+├── build.py                 # 合并脚本：生成 本地音乐播放器.py
+├── requirements.txt         # 依赖清单
+├── LICENSE                  # MIT 协议
+├── covers_cache/            # 联网封面缓存（自动生成）
+└── favorites.json           # 收藏记录（自动生成）
 ```
 
 ## ⚖️ License
